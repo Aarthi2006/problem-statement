@@ -37,6 +37,39 @@ public class Main {
             sqdnumber /= 10;
         }
 
+3)
+public class Main {
+    public static void main(String[] args) {
+        int number = 3; 
+        int cycle_no = 0;
+        int finalNumber = number;
+
+        while (finalNumber != 1 && cycle_no < 10) {
+            int sum = 0;
+            int temp = finalNumber;
+
+        
+            while (temp > 0) {
+                int digit = temp % 10;
+                sum += digit * digit;
+                temp /= 10;
+            }
+
+            
+            finalNumber = sum;
+            cycle_no++;
+        }
+        if (finalNumber == 1) {
+            System.out.println("The number is a Happy Number.");
+        } else {
+            System.out.println("The number is NOT a Happy Number after 10 cycles.");
+        }
+
+        System.out.println("Final number after cycles: " + finalNumber);
+        System.out.println("Number of cycles performed: " + cycle_no);
+    }
+}
+
         System.out.println("Sum of squares of digits: " + sqdNumber_result);
     }
 }
